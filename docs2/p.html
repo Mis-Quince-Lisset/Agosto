@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handwriting Animation</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>.handwriting {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 36px;
+}
+</style>
+</head>
+<body>
+
+<div id="text" class="handwriting"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script >
+    document.addEventListener('DOMContentLoaded', function(){
+    var options = {
+        strings: ["Hello, world!"], // Aquí puedes agregar más texto si lo deseas
+        typeSpeed: 150, // Velocidad de escritura (en milisegundos por caracter)
+        showCursor: false, // Oculta el cursor al finalizar la escritura
+    };
+    var typed = new Typed('#text', options);
+});
+
+</script>
+
+</body>
+</html>
