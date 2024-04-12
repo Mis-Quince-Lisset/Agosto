@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Satisfy";
+  src: url("./fonts/Satisfy-Regular.ttf");
+}
+
+* {
+  color: #a2b0c4;
+  font-family: "Satisfy";
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #1b2a3d;
+}
+
+#gridArea {
+  display: grid;
+  gap: 4px;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "prin"
+    "cont"
+    "cont"
+    "cont"
+    "cont"
+    "cont"
+    "cont";
+  height: 99.6vh;
+}
+
+#contenedor_principal {
+  grid-area: cont;
+  display: grid;
+  align-content: space-between  !important;
+  justify-items: center !important;
+  max-height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#container {
+  grid-area: prin;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#container_2 {
+  max-width: 60%;
+}
+
+label {
+  font-size: 24px;
+  text-align: center;
+}
+
+.grow {
+  font-size: 32px;
+  text-align: center;
+}
+
+.pad {
+  padding-top: 5px;
+}

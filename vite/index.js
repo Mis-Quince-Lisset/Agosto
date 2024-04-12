@@ -1,5 +1,8 @@
 import Vara from "vara";
-var vara = new Vara(
+
+let windowHeight = window.innerHeight;
+
+let vara = new Vara(
     "#container",
     "./fonts/font.json",
     [
@@ -7,33 +10,23 @@ var vara = new Vara(
         text: "Lisset Mis XV años",
         textAlign: "center",
         strokeWidth: 2.5,
-        color: "#fff",
-        y: 80,
-        duration: 2500,
+        color: "#e2e7ec",
+        y: 35,
+        duration: 7500,
         id: "sphinx",
       },
-    //   {
-    //     text: " Cada día es un sueño que se puede tocar, cada día es un amor que sepuede sentir, cada día es una razón para vivir, con la bendición deDios y el amor de mi familia me siento muy feliz de llegar a este díatan especial en mi vida, gracias por formar parte de él",
-    //     width: 500,
-    //     strokeWidth: 2.5,
-    //     y: 40,
-    //     x: 80,
-    //     duration: 4000,
-    //   },
-    //   {
-    //     text: "Sphinx of black quartz, judge my vow.",
-    //     strokeWidth: 2,
-    //     color: "blue",
-    //     id: "sphinx",
-    //     autoAnimation: false,
-    //     x: 80,
-    //     duration: 4500,
-    //   },
     ],
     {
-      fontSize: 76,
+      fontSize: 52,
     }
   );
+
+
   vara.ready(function () {
     vara.draw("sphinx");
+    document.getElementsByTagName("g")[0].style.filter = "drop-shadow(3px 5px 2px  rgba(0, 188, 128, 10))";
   });
+  window.onresize = function() {
+    // Recargar la página al redimensionar
+    location.reload();
+  };
