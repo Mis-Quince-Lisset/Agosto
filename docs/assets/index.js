@@ -520,8 +520,11 @@ var D = { exports: {} };
     }),
     (C.exports = p);
 })(D);
+
 var _ = D.exports;
+
 const q = H(_);
+
 let O = new q(
   "#container",
   "font.json",
@@ -538,15 +541,19 @@ let O = new q(
   ],
   { fontSize: 52 }
 );
+
 O.ready(function () {
   O.draw("sphinx"),
     (document.getElementsByTagName("g")[0].style.filter =
       "drop-shadow(3px 5px 2px  rgba(0, 188, 128, 15))");
 });
+
 window.onresize = function () {
   location.reload();
 };
+
 let F = document.getElementById("miAudio");
 document.getElementById("startAudio").addEventListener("click", () => {
   F.play();
 });
+/*SE AGREGO ESTE COMENTARIO PARA QUE SE RECARGUE EL WORKFLOW*/
