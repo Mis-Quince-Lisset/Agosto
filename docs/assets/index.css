@@ -216,7 +216,7 @@
   }
   #container {
     grid-area: prin;
-    max-height: 100%;
+    height: 100%;
     width: 100%;
     display: flex;
     align-content: center;
@@ -489,7 +489,7 @@
     display: grid;
     align-content: space-between;
     justify-items: center;
-    max-height: 90%;
+    height: 90%;
     width: 100%;
     text-align: center;
   }
@@ -731,7 +731,7 @@
     display: grid;
     align-content: space-between;
     justify-items: center;
-    max-height: 90%;
+    height: 90%;
     width: 100%;
     text-align: center;
   }
