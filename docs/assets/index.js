@@ -524,7 +524,7 @@ var _ = D.exports;
 const q = H(_);
 let O = new q(
   "#container",
-  "./fonts/font.json",
+  "font.json",
   [
     {
       text: "Lisset Mis XV años",
