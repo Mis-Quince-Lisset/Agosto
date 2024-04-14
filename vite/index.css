@@ -3,7 +3,7 @@
   src: url("./fonts/Satisfy-Regular.ttf");
 }
 
-@media (orientation: landscape) and ((max-width: 1000px) or (min-width: 431px)) and (max-height: 700px) {
+@media (orientation: landscape) and ((max-width: 1000px) or (min-width: 431px)) and (max-height: 793px) {
   * {
     display: none;
   }
