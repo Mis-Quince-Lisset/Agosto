@@ -548,12 +548,21 @@ O.ready(function () {
       "drop-shadow(3px 5px 2px  rgba(0, 188, 128, 15))");
 });
 
-window.onresize = function () {
-  location.reload();
-};
+// window.onresize = function () {
+//   location.reload();
+// };
 
 let F = document.getElementById("miAudio");
 document.getElementById("startAudio").addEventListener("click", () => {
+ 
   F.play();
+  document.documentElement.requestFullscreen();
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+    location.reload();
+  }
+  
 });
 /*SE AGREGO ESTE COMENTARIO PARA QUE SE RECARGUE EL WORKFLOW*/
