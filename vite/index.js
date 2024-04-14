@@ -28,3 +28,9 @@ vara.ready(function () {
 window.onresize = function () {
   location.reload();
 };
+
+let audio = document.getElementById("miAudio");
+
+document.getElementById("startAudio").addEventListener("click", () => {
+  audio.play();
+});
