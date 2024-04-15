@@ -548,21 +548,31 @@ O.ready(function () {
       "drop-shadow(3px 5px 2px  rgba(0, 188, 128, 15))");
 });
 
-// window.onresize = function () {
-//   location.reload();
-// };
+const isMobile =
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+
+if (!isMobile) {
+  window.onresize = function () {
+    location.reload();
+  };
+}
 
 let F = document.getElementById("miAudio");
 document.getElementById("startAudio").addEventListener("click", () => {
- 
   F.play();
-  document.documentElement.requestFullscreen();
-  if (!document.fullscreenElement) {
+
+  // Si es un dispositivo móvil, ejecuta el código de pantalla completa
+  if (isMobile) {
     document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-    location.reload();
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+      setTimeout(function () {
+        location.reload(); // Recarga la página después de salir del modo de pantalla completa
+      }, 1000);
+    }
   }
-  
 });
-/*SE AGREGO ESTE COMENTARIO PARA QUE SE RECARGUE EL WORKFLOW*/
