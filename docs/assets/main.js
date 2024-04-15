@@ -549,10 +549,9 @@
         "drop-shadow(3px 5px 2px  rgba(0, 188, 128, 15))");
   });
   
-  const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
+  const isMobile = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+
+  console.log("MOBILE: " + isMobile)
   
   if (!isMobile) {
     window.onresize = function () {
