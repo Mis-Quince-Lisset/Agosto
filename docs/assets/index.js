@@ -565,9 +565,20 @@ document.getElementById("startAudio").addEventListener("click", () => {
 
   // Si es un dispositivo móvil, ejecuta el código de pantalla completa
   if (isMobile) {
-    document.documentElement.requestFullscreen();
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+      elem = document.documentElement;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+        /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) {
+        /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
     } else if (document.exitFullscreen) {
       document.exitFullscreen();
       setTimeout(function () {
