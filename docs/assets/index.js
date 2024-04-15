@@ -560,24 +560,24 @@ if (!isMobile) {
 }
 
 let F = document.getElementById("miAudio");
+const elem = document.documentElement;
+
 document.getElementById("startAudio").addEventListener("click", () => {
   F.play();
-
-  // Si es un dispositivo móvil, ejecuta el código de pantalla completa
   if (isMobile) {
     if (!document.fullscreenElement) {
-      elem = document.documentElement;
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
+        console.log("1");
       } else if (elem.mozRequestFullScreen) {
-        /* Firefox */
         elem.mozRequestFullScreen();
+        console.log("Firefox");
       } else if (elem.webkitRequestFullscreen) {
-        /* Chrome, Safari & Opera */
         elem.webkitRequestFullscreen();
+        console.log("Qrome, Safari, Opera");
       } else if (elem.msRequestFullscreen) {
-        /* IE/Edge */
         elem.msRequestFullscreen();
+        console.log("Edge");
       }
     } else if (document.exitFullscreen) {
       document.exitFullscreen();
