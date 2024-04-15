@@ -1,3 +1,4 @@
+
 (function () {
   const y = document.createElement("link").relList;
   if (y && y.supports && y.supports("modulepreload")) return;
@@ -582,8 +583,23 @@ document.getElementById("startAudio").addEventListener("click", () => {
     } else if (document.exitFullscreen) {
       document.exitFullscreen();
       setTimeout(function () {
-        location.reload(); // Recarga la página después de salir del modo de pantalla completa
+        location.reload(); 
       }, 1000);
     }
   }
 });
+
+/*lorem ipusondolorlorem ipusondolor
+lorem ipusondolor
+lorem ipusondolor
+lorem ipusondolor*/
+// lorem ipusondolor
+// lorem ipusondolor
+// lorem ipusondolor
+// lorem ipusondolor
+// Vlorem ipusondolor
+// lorem ipusondolor
+// VisualViewportlorem ipusondolor
+// lorem ipusondolor
+// lorem ipusondolor
+// VisualViewportv
